@@ -1,0 +1,6 @@
+wandb/
+runs/
+*.sh
+*.html
+*.png
+*.out
