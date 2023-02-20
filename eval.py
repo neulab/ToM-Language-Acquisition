@@ -24,9 +24,9 @@ if True:
     from speaker import Speaker
     from tom_speaker import TOMSpeaker
     from coco_speaker import COCOSpeaker
-    from metrics import Fluency, SemanticSimilarity, sentence_length, num_nouns
-    from analysis import pos_count, get_overlap
-    from compute_bleu import compute_bleu
+    from metrics.metrics import Fluency, SemanticSimilarity, sentence_length, num_nouns
+    from metrics.analysis import pos_count, get_overlap
+    from metrics.compute_bleu import compute_bleu
 
 def parse_args():
     # fmt: off
@@ -51,7 +51,7 @@ def parse_args():
         help="the wandb's project name")
     parser.add_argument('--wandb-entity', type=str, default=None,
         help="the entity (team) of wandb's project")
-    parser.add_argument('--captions-file', type=str, default="test_org",
+    parser.add_argument('--captions-file', type=str, default="data/test_org",
         help="file to get auxiliary captions from")
     parser.add_argument('--capture-video', type=lambda x:bool(strtobool(x)), default=False, nargs='?', const=True,
         help='weather to capture videos of the agent performances (check out `videos` folder)')

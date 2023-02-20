@@ -23,7 +23,7 @@ if True:
     from referential_game_env import ReferentialGameEnv
     from tom_speaker import TOMSpeaker
     from coco_speaker import COCOSpeaker
-    from metrics import Fluency, SemanticSimilarity, sentence_length, num_nouns
+    from metrics.metrics import Fluency, SemanticSimilarity, sentence_length, num_nouns
 
 
 def parse_args():
@@ -55,7 +55,7 @@ def parse_args():
         help="run name to save HTML files under")
     parser.add_argument('--render-every-N', type=int, default=50000,
         help="render an HTML file every N updates")
-    parser.add_argument('--captions-file', type=str, default="train_org",
+    parser.add_argument('--captions-file', type=str, default="data/train_org",
         help="file to get auxiliary captions from")
     parser.add_argument('--capture-video', type=lambda x:bool(strtobool(x)), default=False, nargs='?', const=True,
         help='weather to capture videos of the agent performances (check out `videos` folder)')
