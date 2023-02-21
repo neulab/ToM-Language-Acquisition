@@ -1,5 +1,7 @@
 # ToM-Language-Acquisition
-Code and data for the ICLR 2023 paper "[Computational Language Acquisition with Theory of Mind](https://openreview.net/forum?id=C2ulri4duIs)".
+Code used to run experiments for the ICLR 2023 paper "[Computational Language Acquisition with Theory of Mind](https://openreview.net/forum?id=C2ulri4duIs)".
+
+Data, as well as fine-tuned GPT-2 model used to evaluate output utterances, can be downloaded from [this Zenodo link](https://zenodo.org/record/7658915#.Y_PlfezMLAM). 
 
 The script for training new speakers is ```ppo.py```. 
 Example usage: ```python ppo.py --total-timesteps 10000000 --supervised-coef 0.01  --game-file-path data/game_file_20.pt --dev-game-file-path data/game_file_dev.pt  --render-html --exp-name HighWeightToMEasy --render-every-N 1000000 --captions-file data/train_org --track --gamma 1.0 --less-logging --use-tom --beam-size 25 --sigma-decay --tom-weight 1000.0```.
